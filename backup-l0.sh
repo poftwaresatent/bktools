@@ -5,7 +5,7 @@ SRC="/rolo /Users/rolphi"
 
 # level 0
 
-STAMP=`date +'%F-%T%z'`
+STAMP=`date +'%F_%H-%M-%S_%z'`
 
-touch $HOST-$STAMP-l0.stamp
-tar -c -v -f $HOST-$STAMP-l0.tar $SRC 2>&1 | tee $HOST-$STAMP-l0.toc
+touch $HOST-l0-$STAMP.stamp
+tar -c -v -f $HOST-l0-$STAMP.tar $SRC 2>&1 | tee $HOST-l0-$STAMP.toc
