@@ -7,7 +7,7 @@ SRC="/rolo /Users/rolphi"
 
 STAMP=`date +'%F_%H-%M-%S_%z'`
 FIND="find $SRC -type f"
-SPLIT="split -b 2048k - $HOST-l0-$STAMP.tar"
+SPLIT="split -b 2048m - $HOST-l0-$STAMP.tar"
 
 touch $HOST-l0-$STAMP.stamp
 tar -v -c -f >($SPLIT) -T <($FIND) | tee $HOST-l0-$STAMP.toc
